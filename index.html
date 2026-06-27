@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Shekhar Reddy Dental Clinic & AI Diagnostic Care</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Experience world-class dental healthcare in Bengaluru with Dr. Shekhar Reddy. Advanced Root Canal, Implants, Aligners, and automated AI Dental Assistance.">
+<meta name="keywords" content="Dentist Bangalore, Dr Shekhar Reddy, Neelasandra Dental, Root Canal Bengaluru, Dental Implants, Cosmetic Dentist">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+tailwind.config = {
+darkMode: 'class',
+theme: {
+extend: {
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+},
+animation: {
+blob: 'blob 7s infinite',
+fadeIn: 'fadeIn 0.4s ease-out forwards',
+scaleUp: 'scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+},
+keyframes: {
+blob: {
+'0%': { transform: 'translate(0px, 0px) scale(1)' },
+'33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+'66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
+'100%': { transform: 'translate(0px, 0px) scale(1)' },
+},
+fadeIn: {
+'0%': { opacity: '0', transform: 'translateY(10px)' },
+'100%': { opacity: '1', transform: 'translateY(0)' }
+},
+scaleUp: {
+'0%': { opacity: '0', transform: 'scale(0.95)' },
+'100%': { opacity: '1', transform: 'scale(1)' }
+}
+}
+}
+}
+}
+</script>
+
+<style>
+/* Clean transition styles for theme toggling */
+body {
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+.custom-scrollbar::-webkit-scrollbar {
+width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+background: #cbd5e1;
+border-radius: 10px;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+background: #334155;
+}
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen">
+
+<!-- TOP BRAND BAR & ACCESSIBILITY CONTROLS -->
+<div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white text-xs py-2 px-4 flex flex-wrap justify-between items-center gap-2 border-b border-blue-800">
+<div class="flex items-center gap-4 flex-wrap">
+<span class="flex items-center gap-1 font-medium text-yellow-400">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+Open until 9:00 PM
+</span>
+<span class="hidden md:flex items-center gap-1">
+<i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-300"></i> Bazaar Street, Neelasandra, Bengaluru
+</span>
+</div>
+<div class="flex items-center gap-4">
+<button
+onclick="toggleAccessibility()"
+class="bg-blue-800/80 hover:bg-blue-700 text-white px-2 py-0.5 rounded text-[11px] font-semibold flex items-center gap-1"
+>
+<i data-lucide="sparkles" class="w-3 h-3"></i> <span id="acc-btn-text">Large Text</span>
+</button>
+<div class="flex gap-2 text-[11px] font-bold">
+<button onclick="setLanguage('EN')" id="lang-en" class="px-1.5 rounded bg-blue-600">EN</button>
+<button onclick="setLanguage('KN')" id="lang-kn" class="px-1.5 rounded opacity-70">KN</button>
+</div>
+<button
+onclick="toggleTheme()"
+class="p-1 rounded-full hover:bg-slate-800 transition text-amber-400"
+title="Toggle Theme"
+>
+<i data-lucide="moon" id="theme-icon" class="w-4 h-4"></i>
+</button>
+</div>
+</div>
+
+<!-- MAIN NAVIGATION -->
+<nav class="sticky top-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 py-3.5 px-4 md:px-8 shadow-sm">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="flex items-center gap-2 cursor-pointer" onclick="navigate('home')">
+<div class="bg-gradient-to-br from-blue-600 to-teal-400 p-2 rounded-xl text-white shadow-lg shadow-blue-500/20">
+<i data-lucide="activity" class="w-6 h-6"></i>
+</div>
+<div>
+<h1 class="font-extrabold text-lg md:text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 dark:from-blue-400 dark:to-teal-300">
+Dr. Shekhar Reddy
+</h1>
+<p class="text-[10px] uppercase font-bold tracking-widest text-slate-500 dark:text-slate-400">Dental Clinic &amp; AI Diagnostic Care</p>
+</div>
+</div>
+
+<!-- Desktop Links -->
+<div class="hidden lg:flex items-center gap-1.5">
+<button onclick="navigate('home')" id="nav-home" class="nav-btn px-3 py-1.5 rounded-lg text-sm font-semibold bg-blue-600 text-white shadow-md">Home</button>
+<button onclick="navigate('treatments')" id="nav-treatments" class="nav-btn px-3 py-1.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900">Treatments</button>
+<button onclick="navigate('ai-consultation')" id="nav-ai-consultation" class="nav-btn px-3 py-1.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900">AI Consultation</button>
+<button onclick="navigate('appointment')" id="nav-appointment" class="nav-btn px-3 py-1.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900">Book Visit</button>
+<button onclick="navigate('dashboards')" id="nav-dashboards" class="nav-btn px-3 py-1.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900">Portals &amp; Dashboards</button>
+<button onclick="navigate('about')" id="nav-about" class="nav-btn px-3 py-1.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900">Clinic &amp; Doctors</button>
+</div>
+
+<div class="flex items-center gap-3">
+<a
+href="tel:06366649777"
+class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded-xl text-sm flex items-center gap-1.5 shadow-md shadow-emerald-500/15"
+>
+<i data-lucide="phone" class="w-4 h-4"></i> <span class="hidden sm:inline">06366649777</span>
+</a>
+</div>
+</div>
+</nav>
+
+<!-- MAIN BODY ROUTER MOUNT -->
+<main class="max-w-7xl mx-auto px-4 md:px-8 py-8" id="app-container">
+
+<!-- TAB 1: HOME PAGE -->
+<div id="tab-home" class="tab-content space-y-16 animate-fadeIn">
+
+<!-- HERO SECTION -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-4">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300 rounded-full text-xs font-bold">
+<i data-lucide="award" class="w-4 h-4"></i> Rated 4.9/5 by 1200+ Verified Patients
+</div>
+<h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-none text-slate-900 dark:text-white adaptive-heading">
+Modern Dentistry with <br />
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-400">
+A Personal Touch.
+</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-300 max-w-xl adaptive-text">
+Experience world-class dental healthcare right here in Bengaluru. Under the expert leadership of Dr. Shekhar Reddy, our clinic utilizes advanced technology and state-of-the-art diagnostic systems to make dentistry pleasant, efficient, and affordable.
+</p>
+
+<div class="flex flex-wrap gap-3">
+<button
+onclick="navigate('appointment')"
+class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold px-6 py-3.5 rounded-xl text-base shadow-lg shadow-blue-500/25 flex items-center gap-2"
+>
+<i data-lucide="calendar" class="w-5 h-5"></i> Book Appointment
+</button>
+<button
+onclick="navigate('ai-consultation')"
+class="bg-teal-500 hover:bg-teal-600 text-slate-950 font-extrabold px-6 py-3.5 rounded-xl text-base shadow-lg shadow-teal-500/20 flex items-center gap-2"
+>
+<i data-lucide="sparkles" class="w-5 h-5 animate-pulse"></i> Try AI Symptom Check
+</button>
+</div>
+
+<!-- Micro highlights -->
+<div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+<div>
+<h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">15+</h3>
+<p class="text-xs text-slate-500">Years Practice</p>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">12k+</h3>
+<p class="text-xs text-slate-500">Happy Smiles</p>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">100%</h3>
+<p class="text-xs text-slate-500">Safe Sterilization</p>
+</div>
+</div>
+</div>
+
+<!-- Graphical Hero Cards Column -->
+<div class="lg:col-span-5 relative">
+<div class="absolute top-0 -left-4 w-72 h-72 bg-teal-400 rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-blob"></div>
+<div class="absolute -bottom-4 -right-4 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-blob"></div>
+
+<div class="relative space-y-4">
+<!-- Glass Card: Clinic Overview -->
+<div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
+<div class="flex items-center gap-4 mb-4">
+<div class="bg-emerald-100 dark:bg-emerald-950 p-3 rounded-2xl text-emerald-600 dark:text-emerald-400">
+<i data-lucide="shield" class="w-6 h-6"></i>
+</div>
+<div>
+<h4 class="font-extrabold text-slate-900 dark:text-white">ISO 9001:2015 Certified</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Zero-infection sterilization standard</p>
+</div>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+We adhere strictly to the WHO sterilization protocol including biological indicator tests and class-B autoclaves for clinical safety.
+</p>
+</div>
+
+<!-- Dynamic Appointment Alert Widget -->
+<div class="bg-gradient-to-br from-slate-900 to-blue-950 text-white p-6 rounded-3xl shadow-xl space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-xs uppercase tracking-wider text-blue-300 font-extrabold">Next Available Slots Today</span>
+<span class="bg-emerald-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px]">LIVE</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center text-sm border-b border-white/10 pb-2">
+<span>General &amp; Cosmetic Checkup</span>
+<span class="font-bold text-teal-400">04:30 PM</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span>Prosthodontics Consultation</span>
+<span class="font-bold text-teal-400">06:00 PM</span>
+</div>
+</div>
+<button
+onclick="navigate('appointment')"
+class="w-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold py-2.5 rounded-xl transition"
+>
+Instant Booking
+</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- QUICK AI ENGAGEMENT STRIP -->
+<div class="bg-gradient-to-r from-teal-500/10 via-blue-600/10 to-transparent p-6 rounded-3xl border border-blue-500/20 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="space-y-1.5">
+<span class="inline-flex items-center gap-1.5 text-xs text-teal-600 dark:text-teal-400 font-extrabold uppercase tracking-wide">
+<i data-lucide="sparkles" class="w-4 h-4 text-yellow-500"></i> Powered by Advanced AI
+</span>
+<h3 class="text-lg md:text-xl font-bold">Unsure about your tooth pain severity?</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Answer 4 short guided dental questions to map out your risk category immediately.</p>
+</div>
+<button
+onclick="navigate('ai-consultation')"
+class="bg-slate-950 hover:bg-slate-900 text-white font-bold py-3 px-6 rounded-xl text-sm transition shadow-md whitespace-nowrap"
+>
+Launch AI Consultation Assistant
+</button>
+</div>
+
+<!-- POPULAR TREATMENTS SECTION -->
+<div class="space-y-6">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Our Premium Specialties</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400">Gentle, safe, and modern restorative techniques executed by leaders.</p>
+</div>
+<button onclick="navigate('treatments')" class="text-blue-600 dark:text-blue-400 font-bold text-xs hover:underline flex items-center gap-1">
+View All Treatments <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+</button>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="popular-treatments-grid">
+<!-- Populated Dynamically via JS -->
+</div>
+</div>
+
+<!-- THREE COLUMN PILLARS -->
+<div class="bg-slate-100 dark:bg-slate-900/60 p-8 rounded-3xl space-y-8">
+<div class="text-center max-w-2xl mx-auto space-y-2">
+<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white">Why Our Patients Trust Us</h2>
+<p class="text-xs text-slate-500">Uncompromising dental clinical standard since 2011.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-950 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800 space-y-3">
+<div class="bg-blue-100 dark:bg-blue-900/40 w-10 h-10 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
+<i data-lucide="shield-check" class="w-6 h-6"></i>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white">Triple-tier Autoclave Control</h4>
+<p class="text-xs text-slate-500">Every surgical cassette is sterilized in Class-B pre-vacuum chambers. Pouches are sealed and stamped with validation parameters.</p>
+</div>
+
+<div class="bg-white dark:bg-slate-950 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800 space-y-3">
+<div class="bg-indigo-100 dark:bg-indigo-900/40 w-10 h-10 rounded-lg flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+<i data-lucide="layers" class="w-6 h-6"></i>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white">Advanced CBCT &amp; Digital X-Rays</h4>
+<p class="text-xs text-slate-500">Up to 90% less radiation exposure than typical films. We receive high-resolution imagery in 10 seconds for surgical placement.</p>
+</div>
+
+<div class="bg-white dark:bg-slate-950 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800 space-y-3">
+<div class="bg-teal-100 dark:bg-teal-900/40 w-10 h-10 rounded-lg flex items-center justify-center text-teal-600 dark:text-teal-400">
+<i data-lucide="heart-handshake" class="w-6 h-6"></i>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white">Zero-Anxiety &amp; Sedation Dentistry</h4>
+<p class="text-xs text-slate-500">Special techniques to keep dental anxiety away. Ideal dental environment for kids, young adults, and senior patients alike.</p>
+</div>
+</div>
+</div>
+
+<!-- TESTIMONIALS SECTION -->
+<div class="space-y-8">
+<div class="text-center max-w-xl mx-auto space-y-2">
+<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white">Verified Patient Reviews</h2>
+<p class="text-xs text-slate-500">Real feedback from actual patients who received premium restorations.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="testimonials-grid">
+<!-- Populated Dynamically via JS -->
+</div>
+
+<!-- Add Custom Patient Review Form -->
+<div class="bg-slate-100 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 max-w-xl mx-auto">
+<h4 class="font-bold mb-3 text-sm text-slate-900 dark:text-white">Share Your Patient Experience</h4>
+<form onsubmit="addPatientReview(event)" class="space-y-3">
+<div class="grid grid-cols-2 gap-3">
+<input
+id="review-name"
+type="text"
+placeholder="Your Name"
+required
+class="bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-2.5 w-full text-slate-900 dark:text-white"
+/>
+<select
+id="review-rating"
+class="bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-2.5 w-full text-slate-900 dark:text-white"
+>
+<option value="5">5 Star - Exceptional</option>
+<option value="4">4 Star - Very Good</option>
+<option value="3">3 Star - Fair</option>
+</select>
+</div>
+<textarea
+id="review-comment"
+placeholder="Tell us about Dr. Shekhar's treatment approach..."
+required
+rows="3"
+class="bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-2.5 w-full text-slate-900 dark:text-white"
+></textarea>
+<button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2 rounded-lg">
+Post My Review
+</button>
+</form>
+</div>
+</div>
+
+<!-- BENGALURU CLINIC LOCATION CARD -->
+<div class="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5 space-y-4">
+<span class="text-xs uppercase font-extrabold text-blue-600 tracking-wider">Premium Clinic Location</span>
+<h3 class="text-2xl font-bold">Visit Our Facility</h3>
+<p class="text-xs text-slate-500 leading-relaxed">
+Located conveniently in Neelasandra, opposite Mecca Mosque and right below Canara Bank, our premium clinic offers a comfortable lounge, child-friendly treatment areas, and ample parking.
+</p>
+<div class="space-y-3 text-xs">
+<div class="flex gap-2">
+<i data-lucide="map-pin" class="w-4 h-4 text-rose-500 flex-shrink-0"></i>
+<span>Bazaar Street, Below Canara Bank, Opposite Mecca Mosque, Rose Garden, Neelasandra, Bengaluru, Karnataka - 560047</span>
+</div>
+<div class="flex gap-2">
+<i data-lucide="phone" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+<span>06366649777</span>
+</div>
+<div class="flex gap-2">
+<i data-lucide="clock" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+<span>Mon - Sat: 9:00 AM - 9:00 PM | Sunday: Closed</span>
+</div>
+</div>
+</div>
+<!-- Simulated Premium Google Map Embedded Graphic -->
+<div class="lg:col-span-7 bg-slate-100 dark:bg-slate-950 rounded-2xl h-64 flex flex-col items-center justify-center border border-slate-200 dark:border-slate-800 relative overflow-hidden p-6 text-center">
+<div class="absolute inset-0 bg-blue-100/40 dark:bg-blue-900/10 flex flex-col justify-between p-4">
+<div class="flex justify-between items-center w-full">
+<span class="bg-white dark:bg-slate-900 text-[10px] font-bold px-2 py-1 rounded shadow text-slate-900 dark:text-white">Bengaluru Inner Circle Map</span>
+<span class="bg-red-500 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded">LIVE MARKER</span>
+</div>
+
+<div class="flex flex-col items-center space-y-2">
+<div class="w-12 h-12 bg-rose-500 text-white rounded-full flex items-center justify-center animate-bounce shadow-lg shadow-rose-500/50">
+<i data-lucide="map-pin" class="w-6 h-6"></i>
+</div>
+<p class="font-extrabold text-sm text-slate-900 dark:text-white">Dr. Shekhar Reddy Dental Clinic</p>
+<p class="text-[10px] text-slate-500">Bazaar Street, Opposite Mecca Mosque</p>
+</div>
+
+<div class="flex gap-2 justify-center">
+<a
+href="https://maps.google.com/?q=Dr.+Shekhar+Reddy+Dental+Clinic+Bazaar+Street+Below+Canara+Bank+Opposite+Mecca+Mosque+Neelasandra+Bengaluru"
+target="_blank"
+rel="noopener noreferrer"
+class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2 rounded-xl shadow transition"
+>
+Get Directions via Google Maps
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- TAB 2: TREATMENTS PAGE -->
+<div id="tab-treatments" class="tab-content hidden space-y-12 animate-fadeIn">
+<div class="text-center max-w-xl mx-auto space-y-2">
+<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Comprehensive Dental Excellence</h1>
+<p class="text-xs text-slate-500">Every treatment is planned using high-resolution digital imagery for high-precision patient outcomes.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="treatments-list-grid">
+<!-- Populated Dynamically via JS -->
+</div>
+
+<!-- GENERAL INSURANCE SUPPORT & EMI ASSISTANCE -->
+<div class="bg-gradient-to-br from-indigo-900 to-blue-950 text-white p-8 rounded-3xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-xl">
+<div class="md:col-span-8 space-y-4">
+<span class="bg-blue-800 text-blue-200 font-extrabold px-3 py-1 rounded-full text-[10px] uppercase tracking-widest">
+Financial Ease Support
+</span>
+<h3 class="text-2xl font-bold">Affordable Dental Care - 0% EMI &amp; Cashless Insurance</h3>
+<p class="text-xs text-blue-200 leading-relaxed">
+We have partnered with leading medical insurance aggregators and financial services to offer interest-free (0%) EMI plans up to 12 months for root canals, dental implants, aligners, and crowns.
+</p>
+<div class="flex flex-wrap gap-4 text-xs">
+<span class="flex items-center gap-1"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Star Health Dental Care Network</span>
+<span class="flex items-center gap-1"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Care Health Cashless Facility</span>
+<span class="flex items-center gap-1"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Bajaj Finserv EMI Cards Accepted</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-white/10 p-6 rounded-2xl border border-white/10 text-center space-y-3">
+<p class="text-xs text-blue-200">Got dental insurance questions?</p>
+<h4 class="font-extrabold text-lg text-teal-300">0% Down Payment</h4>
+<p class="text-[11px] text-slate-300">Available on Aligner &amp; Implant Treatment plans.</p>
+<button
+onclick="navigate('appointment')"
+class="w-full bg-white text-indigo-900 hover:bg-slate-100 py-2.5 rounded-xl text-xs font-bold transition"
+>
+Contact Desk Officer
+</button>
+</div>
+</div>
+</div>
+
+<!-- TAB 3: AI CONSULTATION PAGE -->
+<div id="tab-ai-consultation" class="tab-content hidden max-w-3xl mx-auto space-y-8 animate-fadeIn">
+<div class="text-center space-y-2">
+<div class="inline-flex items-center gap-1 text-teal-600 dark:text-teal-400 bg-teal-100 dark:bg-teal-950 font-bold px-3 py-1 rounded-full text-xs">
+<i data-lucide="sparkles" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i> Interactive AI Medical Assistant
+</div>
+<h1 class="text-3xl font-extrabold">Instant Dental AI Consultation</h1>
+<p class="text-xs text-slate-500">Provide details of your discomfort. Our streamlined 4-question clinical logic system will categorize your urgency instantly.</p>
+</div>
+
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-lg overflow-hidden">
+<div class="bg-gradient-to-r from-blue-900 to-indigo-950 text-white p-5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-teal-500 text-slate-950 p-2 rounded-xl">
+<i data-lucide="activity" class="w-5 h-5"></i>
+</div>
+<div>
+<h4 class="font-extrabold text-sm">Clinical Assistant (AI V2.5-Light)</h4>
+<p class="text-[10px] text-teal-400 font-bold">● System Ready &amp; Safe Guidance Active</p>
+</div>
+</div>
+<button
+onclick="resetAI()"
+class="bg-white/10 hover:bg-white/20 text-white text-xs px-2.5 py-1 rounded-lg flex items-center gap-1.5 transition"
+>
+<i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Start Over
+</button>
+</div>
+
+<div class="p-6 space-y-6">
+<!-- EDUCATIONAL DISCLAIMER ALWAYS VISIBLE -->
+<div class="bg-blue-50 dark:bg-slate-950 p-3.5 rounded-xl border border-blue-200 dark:border-blue-900 text-[11px] text-blue-700 dark:text-blue-300 flex items-start gap-2.5">
+<i data-lucide="info" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
+<p>
+<strong>Educational Guidance Disclaimer:</strong> This AI System evaluates symptom severities utilizing historical medical datasets to help categorize potential urgencies. It is NOT a medical diagnostic tool and does NOT substitute direct examination by a licensed dentist.
+</p>
+</div>
+
+<!-- Dynamic AI Step Wizard Mount -->
+<div id="ai-wizard-container">
+<!-- Rendered Dynamically via JS -->
+</div>
+</div>
+</div>
+</div>
+
+<!-- TAB 4: APPOINTMENT BOOKING PAGE -->
+<div id="tab-appointment" class="tab-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-fadeIn">
+<div class="lg:col-span-5 space-y-6">
+<span class="text-xs font-extrabold text-blue-600 bg-blue-100 dark:bg-blue-900/40 px-3 py-1 rounded-full uppercase tracking-wider">
+Instant Clinic Booking
+</span>
+<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Schedule Your Appointment</h1>
+<p class="text-xs text-slate-500 leading-relaxed">
+Book a confirmed date instantly. When submitted, this system automatically redirects your detailed parameters straight to Dr. Shekhar's clinic support WhatsApp chat to finalize and lock your seat.
+</p>
+
+<div class="space-y-4 bg-slate-100 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+<h4 class="font-extrabold text-sm mb-2 text-slate-900 dark:text-white">Our Available Dental Board</h4>
+<div class="space-y-3 text-xs" id="doctors-board-list">
+<!-- Populated via JS -->
+</div>
+</div>
+</div>
+
+<div class="lg:col-span-7">
+<div class="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg" id="booking-card-mount">
+<!-- Rendered dynamically as form or success card via JS -->
+</div>
+</div>
+</div>
+
+<!-- TAB 5: PORTALS & DASHBOARDS PAGE -->
+<div id="tab-dashboards" class="tab-content hidden space-y-8 animate-fadeIn">
+<!-- Role Navigation Selector -->
+<div class="flex flex-wrap justify-between items-center gap-4 bg-slate-100 dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Choose Portal Interface:</span>
+<div class="flex gap-1.5" id="dashboard-roles-container">
+<!-- JS populated button state -->
+</div>
+</div>
+<div class="text-[11px] text-slate-500">
+You can switch between roles to test the full mock database environment!
+</div>
+</div>
+
+<!-- Dynamic Dashboard Sub-tabs container -->
+<div id="dashboard-viewport" class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-md">
+<!-- Rendered dynamically depending on role selection -->
+</div>
+</div>
+
+<!-- TAB 6: ABOUT CLINIC & MEET DOCTORS -->
+<div id="tab-about" class="tab-content hidden space-y-16 animate-fadeIn">
+
+<!-- ABOUT HERO -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-6">
+<span class="text-xs uppercase tracking-wider font-extrabold text-blue-600 bg-blue-100 dark:bg-blue-900/40 px-3 py-1 rounded-full">
+Since 2011 In Bengaluru
+</span>
+<h1 class="text-4xl font-extrabold">Dedicated Dental Health Pioneers</h1>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+Dr. Shekhar Reddy Dental Clinic has been a trusted cornerstone of medical health in Rose Garden, Neelasandra, Bengaluru. We specialize in advanced crowns and bridges, prosthetic designs, precision root canal operations, and laser cosmetic dentistry.
+</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-slate-100 dark:bg-slate-900 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800">
+<h5 class="font-bold text-sm text-blue-600">Our Vision</h5>
+<p class="text-xs text-slate-500 mt-1">To simplify complex restorative dentistry with precision, transparency, and maximum post-op support.</p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-900 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800">
+<h5 class="font-bold text-sm text-blue-600">Our Mission</h5>
+<p class="text-xs text-slate-500 mt-1">Ensuring that advanced clinical standards remain accessible to families without massive billing stress.</p>
+</div>
+</div>
+</div>
+
+<div class="lg:col-span-6 bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-md">
+<h3 class="font-extrabold text-lg text-slate-900 dark:text-white">Our Certified Safety Commitments</h3>
+<div class="space-y-3 text-xs">
+<div class="flex gap-2 p-3 bg-slate-50 dark:bg-slate-950 rounded-xl">
+<i data-lucide="shield-check" class="w-5 h-5 text-teal-500 flex-shrink-0"></i>
+<div>
+<p class="font-bold">Sterilization Assurance</p>
+<p class="text-slate-500 mt-0.5">Dual autoclave chemical testing executed weekly to verify total pathogen eradication.</p>
+</div>
+</div>
+<div class="flex gap-2 p-3 bg-slate-50 dark:bg-slate-950 rounded-xl">
+<i data-lucide="shield-check" class="w-5 h-5 text-teal-500 flex-shrink-0"></i>
+<div>
+<p class="font-bold">Premium US Dental Materials Only</p>
+<p class="text-slate-500 mt-0.5">We exclusively purchase raw composites and implant screws certified by ISO dental bodies.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- DOCTORS BIOGRAPHIES -->
+<div class="space-y-8">
+<div class="text-center max-w-xl mx-auto space-y-2">
+<h2 class="text-2xl md:text-3xl font-extrabold">Meet Our Qualified Dental Specialists</h2>
+<p class="text-xs text-slate-500">Every treatment program is signed and supervised by MDS medical professionals.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="about-doctors-grid">
+<!-- Populated Dynamically via JS -->
+</div>
+</div>
+</div>
+
+</main>
+
+<!-- PREMIUM FAQ SECTION -->
+<section class="bg-slate-100 dark:bg-slate-900/60 py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-12 space-y-6">
+<h3 class="font-extrabold text-xl text-slate-900 dark:text-white text-center mb-8">Frequently Asked Patient Queries</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+<div class="space-y-1 bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-800">
+<h5 class="font-bold text-slate-900 dark:text-white text-sm">Q: Do you accept corporate dental insurance?</h5>
+<p class="text-slate-500 leading-relaxed mt-2">Yes, we provide standard cashless treatments and reimbursement support documentation for key medical policy holders including major public sector enterprises.</p>
+</div>
+<div class="space-y-1 bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-800">
+<h5 class="font-bold text-slate-900 dark:text-white text-sm">Q: Is there safe parking available at Neelasandra clinic?</h5>
+<p class="text-slate-500 leading-relaxed mt-2">Yes, dedicated space for two-wheelers and four-wheeler pick-drop is supervised in front of Canara Bank.</p>
+</div>
+<div class="space-y-1 bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-800">
+<h5 class="font-bold text-slate-900 dark:text-white text-sm">Q: How does the Dental AI Assistant calculate results?</h5>
+<p class="text-slate-500 leading-relaxed mt-2">Our AI models evaluate reported symptoms against localized dental clinical diagnostic guidelines to map out estimated urgency levels. It does not replace dentist exams.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER AREA -->
+<footer class="bg-slate-950 text-slate-400 text-xs py-12 px-4 border-t border-slate-850">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-900">
+
+<div class="md:col-span-6 space-y-4">
+<div class="flex items-center gap-2">
+<div class="bg-gradient-to-br from-blue-600 to-teal-400 p-2 rounded-xl text-white">
+<i data-lucide="activity" class="w-5 h-5"></i>
+</div>
+<h4 class="font-extrabold text-base text-white tracking-tight">Dr. Shekhar Reddy Dental Clinic</h4>
+</div>
+<p class="leading-relaxed">
+Dr. Shekhar Reddy Dental Clinic is committed to bringing luxury prosthodontics, advanced endodontics, alignment services, and cosmetic dental designs to people across Bengaluru at fully fair rates.
+</p>
+<p class="text-[11px] text-slate-500">
+ISO 9001:2015 Registered Clinical Sandbox environment.
+</p>
+</div>
+
+<div class="md:col-span-6 space-y-4">
+<h4 class="font-bold text-white uppercase text-[11px] tracking-wider">Quick Clinic Map Links</h4>
+<div class="space-y-2 flex flex-col">
+<button onclick="navigate('home')" class="hover:text-white text-left transition">Clinic Home Screen</button>
+<button onclick="navigate('treatments')" class="hover:text-white text-left transition">Browse Specialties &amp; Pricing</button>
+<button onclick="navigate('ai-consultation')" class="hover:text-white text-left transition">Dental AI Consultation Assistant</button>
+<button onclick="navigate('appointment')" class="hover:text-white text-left transition">Book Verified Appointment</button>
+<button onclick="navigate('dashboards')" class="hover:text-white text-left transition">Patient Lounge &amp; Staff portals</button>
+</div>
+</div>
+
+</div>
+
+<div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 text-[11px]">
+<p>© 2026 Dr. Shekhar Reddy Dental Clinic. All Rights Reserved. Designed to support modern clinical performance parameters.</p>
+<div class="flex gap-4">
+<a href="#privacy" class="hover:underline">Privacy Policy</a>
+<a href="#terms" class="hover:underline">Terms of Service</a>
+</div>
+</div>
+</footer>
+
+<!-- FLOATING WHATSAPP CHAT BUTTON -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+<a
+href="https://api.whatsapp.com/send?phone=916366649777&text=Hello%20Dr.%20Shekhar%20Reddy%20Dental%20Clinic%2C%20I%20have%20an%20enquiry%20regarding%20dental%20treatments."
+target="_blank"
+rel="noopener noreferrer"
+class="bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-emerald-500/30 animate-bounce"
+title="Chat on WhatsApp"
+>
+<i data-lucide="message-square" class="w-6 h-6 fill-white"></i>
+</a>
+</div>
+
+<!-- INTERNAL JAVASCRIPT APP DRIVER -->
+<script>
+// --- DATABASE & DATA OBJECTS ---
+const DOCTORS = [
+{ id: 1, name: "Dr. Shekhar Reddy", role: "Chief Prosthodontist & Implantologist", qual: "MDS, BDS", exp: "15+ Years", lang: "English, Kannada, Hindi, Telugu", timing: "9:00 AM - 1:00 PM, 4:00 PM - 9:00 PM" },
+{ id: 2, name: "Dr. Priya Sharma", role: "Pediatric & Cosmetic Dentist", qual: "BDS, MDS (Pedodontics)", exp: "8+ Years", lang: "English, Hindi, Kannada", timing: "10:00 AM - 4:00 PM" },
+{ id: 3, name: "Dr. Rohan Das", role: "Orthodontist & Aligner Specialist", qual: "MDS (Orthodontics)", exp: "10+ Years", lang: "English, Bengali, Hindi", timing: "2:00 PM - 8:00 PM" }
+];
+
+const TREATMENTS = [
+{ id: "root-canal", name: "Root Canal Therapy", cost: "₹4,500 - ₹8,500", duration: "1-2 Sessions", recovery: "24-48 Hours", desc: "Save a severely decayed or infected tooth by deep cleaning root canals.", benefits: ["Relieves acute pain", "Prevents extraction", "Protects surrounding teeth"] },
+{ id: "implants", name: "Dental Implants", cost: "₹25,000 - ₹45,000", duration: "2-3 Months", recovery: "3-7 Days", desc: "Premium titanium screw replacements for missing teeth with crowns.", benefits: ["Lifetime durability", "Natural appearance", "Restores full chewing power"] },
+{ id: "braces", name: "Braces & Aligners", cost: "₹35,000 - ₹95,000", duration: "6-18 Months", recovery: "Adjustment soreness", desc: "Modern aesthetic and metal systems to correct jaw alignment & crowded teeth.", benefits: ["Perfect symmetry", "Improves oral hygiene", "Boosts confidence"] },
+{ id: "whitening", name: "Laser Teeth Whitening", cost: "₹6,000 - ₹12,000", duration: "45-60 Mins", recovery: "Zero downtime", desc: "Instant visual whitening of teeth using advanced cool-light lasers.", benefits: ["Up to 8 shades lighter", "Removes deep stains", "Fast & pain-free"] },
+{ id: "kids", name: "Pediatric Dentistry", cost: "₹1,500 - ₹4,000", duration: "30-45 Mins", recovery: "Immediate", desc: "Specialized gentle oral care, sealants, and cavity defense for toddlers and youth.", benefits: ["Fears-free experience", "Habit breaking counseling", "Cavity shielding"] },
+{ id: "cosmetic", name: "Smile Makeover / Veneers", cost: "₹8,000 - ₹15,000 / tooth", duration: "2-3 Sessions", recovery: "1-2 Days", desc: "Custom ultra-thin porcelain veneers to mask chips, gaps, and structural spots.", benefits: ["Hollywood smile aesthetics", "Stain resistant surface", "Custom-crafted"] }
+];
+
+// Global application reactive state variables
+const state = {
+tab: 'home',
+darkMode: false,
+accessibility: false,
+language: 'EN',
+appointments: [
+{ id: "A-101", name: "Amit Kumar", phone: "9876543210", doctor: "Dr. Shekhar Reddy", treatment: "Dental Implants", date: "2026-07-01", time: "10:30 AM", status: "Confirmed", paid: true, amount: 25000 },
+{ id: "A-102", name: "Sarah Khan", phone: "8765432109", doctor: "Dr. Priya Sharma", treatment: "Kids Dentistry", date: "2026-07-01", time: "02:15 PM", status: "Pending", paid: false, amount: 1800 },
+{ id: "A-103", name: "Rajesh Rao", phone: "7654321098", doctor: "Dr. Rohan Das", treatment: "Braces & Aligners", date: "2026-07-02", time: "05:00 PM", status: "Confirmed", paid: true, amount: 35000 }
+],
+testimonials: [
+{ name: "Suresh Gowda", rating: 5, comment: "I had a painless root canal procedure from Dr. Shekhar. His team was very supportive and explained every step clearly.", date: "1 week ago" },
+{ name: "Ananya Hegde", rating: 5, comment: "Beautiful clinic atmosphere and exceptional care. The dental AI tool on their website was remarkably helpful to understand my pain before booking.", date: "3 days ago" },
+{ name: "David M.", rating: 5, comment: "Excellent dental implant treatment. Very satisfied with the pricing transparency and modern equipment.", date: "2 weeks ago" }
+],
+aiStep: 0,
+aiAnswers: { location: '', severity: 5, trigger: '', bleedingGums: false, swelling: false, fever: false, badOdor: false },
+aiResult: null,
+aiIsAnalyzing: false,
+currentUserRole: 'patient',
+patientLoginPhone: '',
+isPatientLoggedIn: false,
+loggedInPatientData: null,
+bookingForm: { name: '', phone: '', doctor: DOCTORS[0].name, treatment: TREATMENTS[0].name, date: '', time: '10:00 AM', notes: '' },
+bookingSuccess: false,
+prescriptions: [
+{ id: "P-01", patientName: "Amit Kumar", medName: "Amoxicillin 500mg", dosage: "1-0-1 (After Food)", duration: "5 Days", date: "2026-06-25" },
+{ id: "P-02", patientName: "Rajesh Rao", medName: "Paracetamol 650mg", dosage: "As needed", duration: "3 Days", date: "2026-06-25" }
+],
+newPrescription: { patientId: 'A-101', medName: '', dosage: '', duration: '' }
+};
+
+// --- STREAMING_CHUNK:Creating DOM renderer methods... ---
+// Router tab controller
+function navigate(tabId) {
+state.tab = tabId;
+document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+
+// Update Navigation styling
+document.querySelectorAll('.nav-btn').forEach(btn => {
+btn.className = "nav-btn px-3 py-1.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900";
+});
+const activeNav = document.getElementById(`nav-${tabId}`);
+if (activeNav) {
+activeNav.className = "nav-btn px-3 py-1.5 rounded-lg text-sm font-semibold bg-blue-600 text-white shadow-md";
+}
+
+window.scrollTo(0, 0);
+render();
+}
+
+// Toggle Dark Theme
+function toggleTheme() {
+state.darkMode = !state.darkMode;
+const html = document.documentElement;
+const themeIcon = document.getElementById('theme-icon');
+if (state.darkMode) {
+html.classList.add('dark');
+themeIcon.setAttribute('data-lucide', 'sun');
+} else {
+html.classList.remove('dark');
+themeIcon.setAttribute('data-lucide', 'moon');
+}
+lucide.createIcons();
+}
+
+// Toggle Accessibility text sizes
+function toggleAccessibility() {
+state.accessibility = !state.accessibility;
+const headings = document.querySelectorAll('.adaptive-heading');
+const paragraphs = document.querySelectorAll('.adaptive-text');
+const accText = document.getElementById('acc-btn-text');
+
+if (state.accessibility) {
+headings.forEach(h => { h.style.fontSize = "2.5rem"; h.style.lineHeight = "1.1"; });
+paragraphs.forEach(p => { p.style.fontSize = "1.25rem"; p.style.lineHeight = "1.5"; });
+accText.textContent = "Standard Text";
+} else {
+headings.forEach(h => { h.style.fontSize = ""; h.style.lineHeight = ""; });
+paragraphs.forEach(p => { p.style.fontSize = ""; p.style.lineHeight = ""; });
+accText.textContent = "Large Text";
+}
+}
+
+// Language controller placeholder
+function setLanguage(lang) {
+state.language = lang;
+document.getElementById('lang-en').className = lang === 'EN' ? "px-1.5 rounded bg-blue-600" : "px-1.5 rounded opacity-70";
+document.getElementById('lang-kn').className = lang === 'KN' ? "px-1.5 rounded bg-blue-600" : "px-1.5 rounded opacity-70";
+}
+
+// --- STREAMING_CHUNK:Populating Treatments & Doctors list... ---
+// Initialize Home Treatments Specialties Grid
+function renderHomeTreatments() {
+const container = document.getElementById('popular-treatments-grid');
+if (!container) return;
+container.innerHTML = TREATMENTS.slice(0, 3).map(t => `
+<div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-sm hover:shadow-lg transition">
+<div class="space-y-3">
+<div class="bg-blue-50 dark:bg-blue-950/50 w-12 h-12 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400">
+<i data-lucide="stethoscope" class="w-6 h-6"></i>
+</div>
+<h3 class="font-extrabold text-lg text-slate-900 dark:text-white">${t.name}</h3>
+<p class="text-xs text-slate-500 line-clamp-2">${t.desc}</p>
+
+<div class="space-y-1 text-xs text-slate-600 dark:text-slate-400 pt-2">
+<div class="flex justify-between">
+<span>Est. Cost:</span>
+<span class="font-bold text-teal-600 dark:text-teal-400">${t.cost}</span>
+</div>
+<div class="flex justify-between">
+<span>Duration:</span>
+<span class="font-medium">${t.duration}</span>
+</div>
+</div>
+</div>
+<div class="pt-6">
+<button
+onclick="selectTreatmentAndBook('${t.name}')"
+class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white text-slate-700 dark:text-white py-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5"
+>
+Book This Treatment <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+</button>
+</div>
+</div>
+`).join('');
+}
+
+// Select Treatment & Navigate to Booking
+function selectTreatmentAndBook(treatmentName) {
+state.bookingForm.treatment = treatmentName;
+navigate('appointment');
+}
+
+// Render Tab 2 Treatments Full Matrix
+function renderTreatmentsList() {
+const container = document.getElementById('treatments-list-grid');
+if (!container) return;
+container.innerHTML = TREATMENTS.map(t => `
+<div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-2xl text-blue-600 dark:text-blue-400">
+<i data-lucide="stethoscope" class="w-6 h-6"></i>
+</div>
+<span class="text-xs bg-teal-100 dark:bg-teal-950 text-teal-800 dark:text-teal-300 font-extrabold px-3 py-1 rounded-full">
+${t.duration}
+</span>
+</div>
+
+<h3 class="text-xl font-extrabold text-slate-900 dark:text-white">${t.name}</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${t.desc}</p>
+
+<div class="space-y-2 py-2">
+<p class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Key Benefits:</p>
+<ul class="space-y-1.5">
+${t.benefits.map(b => `
+<li class="text-xs flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-teal-500 rounded-full"></span>
+<span>${b}</span>
+</li>
+`).join('')}
+</ul>
+</div>
+
+<div class="grid grid-cols-3 gap-2 bg-slate-50 dark:bg-slate-950 p-4 rounded-xl text-xs text-slate-600 dark:text-slate-400 border border-slate-200/55 dark:border-slate-850">
+<div>
+<p class="text-[10px] text-slate-400 uppercase font-bold">Cost Estimate</p>
+<p class="font-extrabold text-teal-600 dark:text-teal-400 mt-1">${t.cost}</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-400 uppercase font-bold">Recovery Time</p>
+<p class="font-bold text-slate-900 dark:text-white mt-1">${t.recovery}</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-400 uppercase font-bold">Clinician</p>
+<p class="font-bold text-slate-900 dark:text-white mt-1">Specialist MDS</p>
+</div>
+</div>
+</div>
+
+<div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-850 flex gap-2">
+<button
+onclick="selectTreatmentAndBook('${t.name}')"
+class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-3 rounded-xl transition text-center"
+>
+Book Free Assessment Session
+</button>
+<button
+onclick="navigate('ai-consultation')"
+class="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 p-3 rounded-xl text-slate-700 dark:text-white"
+title="AI Pre-check for this issue"
+>
+<i data-lucide="sparkles" class="w-4 h-4"></i>
+</button>
+</div>
+</div>
+`).join('');
+}
+
+// Render Doctors Board List on Booking View Sidebar
+function renderDoctorsBoard() {
+const container = document.getElementById('doctors-board-list');
+if (!container) return;
+container.innerHTML = DOCTORS.map(doc => `
+<div class="text-xs border-b border-slate-200 dark:border-slate-800 pb-2.5 last:border-0 last:pb-0">
+<p class="font-bold text-slate-900 dark:text-white">${doc.name}</p>
+<p class="text-slate-500">${doc.role} (${doc.qual})</p>
+<p class="text-slate-400 mt-0.5">Availability: ${doc.timing}</p>
+</div>
+`).join('');
+}
+
+// Render Tab 6 Meet Doctors Grid
+function renderAboutDoctors() {
+const container = document.getElementById('about-doctors-grid');
+if (!container) return;
+container.innerHTML = DOCTORS.map(doc => `
+<div class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between shadow-sm">
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-950 dark:to-indigo-950 h-48 rounded-2xl flex items-center justify-center relative overflow-hidden">
+<i data-lucide="user" class="w-16 h-16 text-blue-500 dark:text-blue-300 opacity-80"></i>
+<span class="absolute bottom-2 left-2 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">
+${doc.qual}
+</span>
+</div>
+
+<div class="space-y-1">
+<h4 class="font-extrabold text-lg text-slate-900 dark:text-white">${doc.name}</h4>
+<p class="text-xs text-blue-600 dark:text-blue-400 font-bold">${doc.role}</p>
+<p class="text-[11px] text-slate-400">Clinical practice: ${doc.exp}</p>
+</div>
+
+<div class="text-xs space-y-1.5 border-t border-slate-100 dark:border-slate-850 pt-3">
+<p class="text-slate-500">🗣 Languages: <strong class="text-slate-700 dark:text-slate-300">${doc.lang}</strong></p>
+<p class="text-slate-500">🕒 Availability: <strong class="text-slate-700 dark:text-slate-300">${doc.timing}</strong></p>
+</div>
+</div>
+
+<div class="pt-6">
+<button
+onclick="selectDoctorAndBook('${doc.name}')"
+class="w-full bg-slate-950 hover:bg-slate-900 text-white font-bold py-2.5 rounded-xl text-xs transition"
+>
+Request Consult with ${doc.name.split(' ')[2]}
+</button>
+</div>
+</div>
+`).join('');
+}
+
+function selectDoctorAndBook(doctorName) {
+state.bookingForm.doctor = doctorName;
+navigate('appointment');
+}
+
+// Render Testimonials List on Home View
+function renderTestimonials() {
+const container = document.getElementById('testimonials-grid');
+if (!container) return;
+container.innerHTML = state.testimonials.map(t => `
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 relative flex flex-col justify-between">
+<div class="space-y-2">
+<div class="flex text-amber-400">
+${Array.from({ length: t.rating }).map(() => `<i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>`).join('')}
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 italic">"${t.comment}"</p>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-slate-100 dark:border-slate-850 mt-4 text-xs">
+<span class="font-extrabold text-slate-900 dark:text-white">${t.name}</span>
+<span class="text-slate-400">${t.date}</span>
+</div>
+</div>
+`).join('');
+}
+
+// Review Form submission handler
+function addPatientReview(event) {
+event.preventDefault();
+const nameVal = document.getElementById('review-name').value;
+const ratingVal = parseInt(document.getElementById('review-rating').value);
+const commentVal = document.getElementById('review-comment').value;
+
+state.testimonials.unshift({
+name: nameVal,
+rating: ratingVal,
+comment: commentVal,
+date: "Just now"
+});
+
+document.getElementById('review-name').value = '';
+document.getElementById('review-comment').value = '';
+renderTestimonials();
+lucide.createIcons();
+}
+
+
+// --- STREAMING_CHUNK:Designing AI Assistant Core Engine... ---
+// --- DENTAL AI DIAGNOSTIC SYSTEM (Exactly 4 Questions, No upload) ---
+function renderAIWizard() {
+const container = document.getElementById('ai-wizard-container');
+if (!container) return;
+
+if (state.aiResult) {
+// AI DIAGNOSTIC COMPLETED REPORT SCREEN
+container.innerHTML = `
+<div class="space-y-6 animate-scaleUp">
+<div class="text-center py-4 border-b border-slate-100 dark:border-slate-800">
+<div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-950 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-2">
+<i data-lucide="check" class="w-6 h-6"></i>
+</div>
+<h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Analysis Report Generated</h4>
+<p class="text-xs text-slate-500">Based on your answered sequence of physiological questions.</p>
+</div>
+
+<div class="space-y-4">
+<!-- Urgency Meter -->
+<div class="p-4 rounded-xl flex items-center justify-between ${state.aiResult.urgencyColor}">
+<span class="font-bold text-xs uppercase tracking-wider">Categorized Clinical Urgency:</span>
+<span class="font-extrabold text-sm">${state.aiResult.urgency}</span>
+</div>
+
+<!-- Primary educational condition -->
+<div class="space-y-2">
+<h5 class="font-bold text-xs text-slate-400 uppercase">Primary Educational Condition Category:</h5>
+<div class="bg-slate-100 dark:bg-slate-950 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="font-extrabold text-sm text-slate-900 dark:text-white">${state.aiResult.diagnosis}</p>
+<p class="text-xs text-slate-500 mt-1">Recommended dental specialty unit is <strong class="text-slate-900 dark:text-white">${state.aiResult.recommendedDept}</strong> (Estimated consult duration: ${state.aiResult.duration}).</p>
+</div>
+</div>
+
+<!-- Suggestions -->
+<div class="space-y-2">
+<h5 class="font-bold text-xs text-slate-400 uppercase">Immediate Home-Care Guidelines:</h5>
+<ul class="space-y-1.5 bg-emerald-500/5 p-4 rounded-xl border border-emerald-500/10 text-xs">
+${state.aiResult.suggestions.map(s => `
+<li class="flex items-start gap-2">
+<span class="text-emerald-500 font-bold">✓</span>
+<span class="text-slate-600 dark:text-slate-300">${s}</span>
+</li>
+`).join('')}
+</ul>
+</div>
+
+<!-- Suggested questions -->
+<div class="space-y-2">
+<h5 class="font-bold text-xs text-slate-400 uppercase">Suggested Questions To Ask Dr. Shekhar:</h5>
+<ul class="space-y-1.5 bg-blue-500/5 p-4 rounded-xl border border-blue-500/10 text-xs text-slate-600 dark:text-slate-300 italic">
+${state.aiResult.questionsToAsk.map(q => `
+<li class="flex gap-2">
+<span>•</span>
+<span>"${q}"</span>
+</li>
+`).join('')}
+</ul>
+</div>
+</div>
+
+<div class="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row gap-3">
+<button
+onclick="setupBookingWithAISuggestion('${state.aiResult.diagnosis}')"
+class="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 text-white font-extrabold py-3 rounded-xl text-xs transition"
+>
+Proceed to Schedule Clinic Appointment
+</button>
+<button
+onclick="resetAI()"
+class="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white py-3 px-6 rounded-xl text-xs font-bold transition"
+>
+Reset and Test Again
+</button>
+</div>
+</div>
+`;
+lucide.createIcons();
+return;
+}
+
+if (state.aiIsAnalyzing) {
+container.innerHTML = `
+<div class="text-center py-12 space-y-3">
+<div class="inline-block w-8 h-8 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
+<p class="text-sm text-slate-500">AI Logic Core processing symptom triggers and analyzing severity matrix...</p>
+</div>
+`;
+return;
+}
+
+// ACTIVE QUESTION RENDERER
+switch (state.aiStep) {
+case 0:
+container.innerHTML = `
+<div class="space-y-4 animate-fadeIn">
+<p class="text-sm font-semibold text-blue-600 dark:text-blue-400">Question 1 of 4: Where is the pain/discomfort centered?</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+${["Upper Front Teeth", "Upper Back Teeth", "Lower Front Teeth", "Lower Back Teeth", "Entire Gum Area", "Wisdom Tooth Zone"].map(opt => `
+<button
+onclick="answerAIQuestion('location', '${opt}')"
+class="bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white p-3 rounded-xl text-xs font-semibold text-center transition"
+>
+${opt}
+</button>
+`).join('')}
+</div>
+</div>
+`;
+break;
+
+case 1:
+container.innerHTML = `
+<div class="space-y-4 animate-fadeIn">
+<p class="text-sm font-semibold text-blue-600 dark:text-blue-400">Question 2 of 4: Rate your pain on a scale from 0 to 10.</p>
+<div class="space-y-3">
+<input
+type="range"
+min="0"
+max="10"
+value="${state.aiAnswers.severity}"
+id="ai-pain-slider"
+oninput="updatePainSliderVal(this.value)"
+class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+/>
+<div class="flex justify-between text-xs font-bold">
+<span class="text-green-500">0 (No Pain)</span>
+<span class="text-yellow-500">5 (Moderate)</span>
+<span class="text-red-500">10 (Extreme Pain)</span>
+</div>
+<div class="text-center pt-2">
+<span class="bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full text-xs font-extrabold" id="pain-slider-badge">
+Selected Level: ${state.aiAnswers.severity} / 10
+</span>
+</div>
+</div>
+<button
+onclick="confirmAISeverity()"
+class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-xl text-xs font-bold transition"
+>
+Confirm &amp; Proceed
+</button>
+</div>
+`;
+break;
+
+case 2:
+container.innerHTML = `
+<div class="space-y-4 animate-fadeIn">
+<p class="text-sm font-semibold text-blue-600 dark:text-blue-400">Question 3 of 4: Select the primary physical trigger of the pain.</p>
+<div class="grid grid-cols-2 gap-2">
+${["Cold Foods / Water", "Hot Drinks", "Sweet or Sugary items", "Biting pressure", "Constant deep ache (No trigger)", "Unsure"].map(opt => `
+<button
+onclick="answerAIQuestion('trigger', '${opt}')"
+class="bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white p-3 rounded-xl text-xs font-semibold transition"
+>
+${opt}
+</button>
+`).join('')}
+</div>
+</div>
+`;
+break;
+
+case 3:
+container.innerHTML = `
+<div class="space-y-4 animate-fadeIn">
+<p class="text-sm font-semibold text-blue-600 dark:text-blue-400">Question 4 of 4: Select any accompanying symptoms you are experiencing.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+<label class="flex items-center gap-2 bg-slate-50 dark:bg-slate-950 p-3 rounded-xl border border-slate-200 dark:border-slate-800 cursor-pointer">
+<input type="checkbox" id="check-gums" ${state.aiAnswers.bleedingGums ? 'checked' : ''} class="w-4 h-4 rounded text-blue-600">
+<span>My gums bleed during brushing</span>
+</label>
+
+<label class="flex items-center gap-2 bg-slate-50 dark:bg-slate-950 p-3 rounded-xl border border-slate-200 dark:border-slate-800 cursor-pointer">
+<input type="checkbox" id="check-swelling" ${state.aiAnswers.swelling ? 'checked' : ''} class="w-4 h-4 rounded text-blue-600">
+<span>Visible swelling around my gums/jaw</span>
+</label>
+
+<label class="flex items-center gap-2 bg-slate-50 dark:bg-slate-950 p-3 rounded-xl border border-slate-200 dark:border-slate-800 cursor-pointer">
+<input type="checkbox" id="check-fever" ${state.aiAnswers.fever ? 'checked' : ''} class="w-4 h-4 rounded text-blue-600">
+<span>I am running a fever with this toothache</span>
+</label>
+
+<label class="flex items-center gap-2 bg-slate-50 dark:bg-slate-950 p-3 rounded-xl border border-slate-200 dark:border-slate-800 cursor-pointer">
+<input type="checkbox" id="check-odor" ${state.aiAnswers.badOdor ? 'checked' : ''} class="w-4 h-4 rounded text-blue-600">
+<span>Persistent metallic or bad mouth taste</span>
+</label>
+</div>
+
+<button
+onclick="executeDiagnostic()"
+class="w-full bg-teal-500 hover:bg-teal-600 text-slate-950 font-extrabold py-3 rounded-xl text-xs transition mt-4"
+>
+Analyze &amp; Generate Report
+</button>
+</div>
+`;
+break;
+}
+}
+
+function updatePainSliderVal(val) {
+state.aiAnswers.severity = parseInt(val);
+document.getElementById('pain-slider-badge').textContent = `Selected Level: ${val} / 10`;
+}
+
+function answerAIQuestion(field, value) {
+state.aiAnswers[field] = value;
+state.aiStep++;
+renderAIWizard();
+}
+
+function confirmAISeverity() {
+state.aiStep++;
+renderAIWizard();
+}
+
+function executeDiagnostic() {
+// Gather symptom checkboxes state
+state.aiAnswers.bleedingGums = document.getElementById('check-gums').checked;
+state.aiAnswers.swelling = document.getElementById('check-swelling').checked;
+state.aiAnswers.fever = document.getElementById('check-fever').checked;
+state.aiAnswers.badOdor = document.getElementById('check-odor').checked;
+
+state.aiIsAnalyzing = true;
+renderAIWizard();
+
+setTimeout(() => {
+const { severity, bleedingGums, swelling, fever, trigger } = state.aiAnswers;
+let diagnosis = "General Dental Sensitivity";
+let urgency = "🟢 Low";
+let urgencyColor = "text-green-500 bg-green-50 dark:bg-green-950 border border-green-500";
+let suggestions = ["Rinse gently with warm salt water.", "Avoid extremely hot, cold, or sugary drinks.", "Use a desensitizing soft-bristle toothbrush."];
+let recommendedDept = "General Dentistry";
+let duration = "20-30 Mins";
+
+if (severity >= 8 || fever || swelling) {
+diagnosis = "Acute Pulpitis / Abscess Potential";
+urgency = "🔴 Emergency Care Needed";
+urgencyColor = "text-red-500 bg-red-50 dark:bg-red-950 animate-pulse border border-red-500";
+suggestions = [
+"Seek emergency clinical dental attention within 12-24 hours.",
+"Apply cold compress externally to the jaw for swelling. Do not apply heat.",
+"Over-the-counter pain relievers can be taken strictly as directed."
+];
+recommendedDept = "Endodontics (Root Canal Specialization) or Oral Surgery";
+duration = "45-60 Mins";
+} else if (bleedingGums && swelling) {
+diagnosis = "Moderate Gingivitis / Periodontitis Flareup";
+urgency = "🟠 High";
+urgencyColor = "text-orange-500 bg-orange-50 dark:bg-orange-950 border border-orange-500";
+suggestions = ["Rinse with warm salt water twice daily.", "Continue brushing gently; do not skip bleeding spots entirely.", "Schedule professional deep scaling/cleaning."];
+recommendedDept = "Periodontics (Gum Specialists)";
+duration = "30-45 Mins";
+} else if (trigger === "Cold Foods / Water" || trigger === "Hot Drinks") {
+diagnosis = "Enamel Erosion or Inner Tooth Decay";
+urgency = "🟡 Moderate";
+urgencyColor = "text-yellow-500 bg-yellow-50 dark:bg-yellow-950 border border-yellow-500";
+suggestions = ["Avoid directly chewing hard food on that specific quadrant.", "Avoid carbonated beverages.", "Maintain ideal brushing and schedule restorative checkup."];
+recommendedDept = "Cosmetic & Conservative Dentistry";
+duration = "30 Mins";
+}
+
+state.aiResult = {
+diagnosis,
+urgency,
+urgencyColor,
+suggestions,
+recommendedDept,
+duration,
+questionsToAsk: [
+`Do I need a protective filling or is the root canal space compromised?`,
+`Are my symptoms indicating any bone level or nerve inflammation?`,
+`What are the long-term preventive steps for this issue?`
+]
+};
+
+state.aiIsAnalyzing = false;
+renderAIWizard();
+}, 1500);
+}
+
+function setupBookingWithAISuggestion(diagnosis) {
+state.bookingForm.notes = `AI diagnostic suggestion category: ${diagnosis}`;
+navigate('appointment');
+}
+
+function resetAI() {
+state.aiStep = 0;
+state.aiResult = null;
+state.aiAnswers = { location: '', severity: 5, trigger: '', bleedingGums: false, swelling: false, fever: false, badOdor: false };
+renderAIWizard();
+}
+
+
+// --- STREAMING_CHUNK:Configuring Appointment Booking Engine... ---
+// --- APPOINTMENT BOOKING FORM & SUCCESS STATE ---
+function renderBookingContainer() {
+const mount = document.getElementById('booking-card-mount');
+if (!mount) return;
+
+if (state.bookingSuccess) {
+// SUCCESS CARD REDIRECT SCREEN
+mount.innerHTML = `
+<div class="bg-emerald-50 dark:bg-emerald-950 p-6 rounded-2xl border border-emerald-300 dark:border-emerald-800 text-center space-y-4 animate-scaleUp">
+<div class="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto shadow-lg">
+<i data-lucide="check" class="w-6 h-6"></i>
+</div>
+<div class="space-y-1">
+<h4 class="font-extrabold text-lg text-emerald-800 dark:text-emerald-400">Appointment Saved &amp; Redirecting!</h4>
+<p class="text-xs text-slate-500">We have initiated a WhatsApp message with details directly to Dr. Shekhar Reddy's phone.</p>
+</div>
+<p class="text-xs font-bold text-slate-700 dark:text-slate-300">
+We have booked your appointment on <strong class="text-blue-600">${state.bookingForm.date}</strong> at <strong class="text-blue-600">${state.bookingForm.time}</strong> with <strong class="text-blue-600">${state.bookingForm.doctor}</strong>.
+</p>
+
+<div class="flex flex-col sm:flex-row gap-2 justify-center pt-2">
+<a
+href="${getWhatsAppUrl()}"
+target="_blank"
+rel="noopener noreferrer"
+class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-2.5 px-6 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow"
+>
+<i data-lucide="message-square" class="w-4 h-4 fill-white"></i> Confirm on WhatsApp manually
+</a>
+<button
+onclick="resetBookingSuccess()"
+class="bg-slate-200 dark:bg-slate-800 hover:bg-slate-350 text-slate-800 dark:text-white font-bold py-2.5 px-6 rounded-xl text-xs transition"
+>
+Book Another Slot
+</button>
+</div>
+</div>
+`;
+lucide.createIcons();
+return;
+}
+
+// BOOKING INPUT FORM
+mount.innerHTML = `
+<h3 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Fill Clinical Booking Details</h3>
+<form onsubmit="handleBookSubmission(event)" class="space-y-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-400">Patient Full Name*</label>
+<input
+type="text"
+required
+id="book-name"
+placeholder="E.g., Amit Kumar"
+value="${state.bookingForm.name}"
+class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-3 text-slate-900 dark:text-white"
+/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-400">Contact Number*</label>
+<input
+type="tel"
+required
+id="book-phone"
+placeholder="E.g., 9876543210"
+value="${state.bookingForm.phone}"
+class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-3 text-slate-900 dark:text-white"
+/>
+</div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-400">Select Dentist*</label>
+<select
+id="book-doctor"
+class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-3 text-slate-900 dark:text-white"
+>
+${DOCTORS.map(doc => `<option value="${doc.name}" ${state.bookingForm.doctor === doc.name ? 'selected' : ''}>${doc.name}</option>`).join('')}
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-400">Select Treatment Area*</label>
+<select
+id="book-treatment"
+class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-3 text-slate-900 dark:text-white"
+>
+${TREATMENTS.map(t => `<option value="${t.name}" ${state.bookingForm.treatment === t.name ? 'selected' : ''}>${t.name}</option>`).join('')}
+<option value="General Consultation">General Examination &amp; Dental Check</option>
+</select>
+</div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-400">Preferred Date*</label>
+<input
+type="date"
+required
+id="book-date"
+value="${state.bookingForm.date}"
+class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-3 text-slate-900 dark:text-white"
+/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-400">Preferred Time Slot*</label>
+<select
+id="book-time"
+class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-3 text-slate-900 dark:text-white"
+>
+<option value="10:00 AM" ${state.bookingForm.time === '10:00 AM' ? 'selected' : ''}>10:00 AM (Morning Session)</option>
+<option value="11:30 AM" ${state.bookingForm.time === '11:30 AM' ? 'selected' : ''}>11:30 AM (Morning Session)</option>
+<option value="02:30 PM" ${state.bookingForm.time === '02:30 PM' ? 'selected' : ''}>02:30 PM (Afternoon Session)</option>
+<option value="05:00 PM" ${state.bookingForm.time === '05:00 PM' ? 'selected' : ''}>05:00 PM (Evening Session)</option>
+<option value="07:30 PM" ${state.bookingForm.time === '07:30 PM' ? 'selected' : ''}>07:30 PM (Evening Session)</option>
+</select>
+</div>
+</div>
+
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-400">Add Any Special Physical/Medical Notes</label>
+<textarea
+rows="3"
+id="book-notes"
+placeholder="E.g., High Blood Pressure, pregnant patient, or jaw tightness"
+class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-3 text-slate-900 dark:text-white"
+>${state.bookingForm.notes}</textarea>
+</div>
+
+<button
+type="submit"
+class="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-3.5 rounded-xl text-sm transition shadow-lg"
+>
+Verify details and Schedule Free Clinical Check
+</button>
+</form>
+`;
+}
+
+function handleBookSubmission(event) {
+event.preventDefault();
+
+state.bookingForm.name = document.getElementById('book-name').value;
+state.bookingForm.phone = document.getElementById('book-phone').value;
+state.bookingForm.doctor = document.getElementById('book-doctor').value;
+state.bookingForm.treatment = document.getElementById('book-treatment').value;
+state.bookingForm.date = document.getElementById('book-date').value;
+state.bookingForm.time = document.getElementById('book-time').value;
+state.bookingForm.notes = document.getElementById('book-notes').value;
+
+const newId = `A-${Math.floor(100 + Math.random() * 900)}`;
+const newAppt = {
+id: newId,
+name: state.bookingForm.name,
+phone: state.bookingForm.phone,
+doctor: state.bookingForm.doctor,
+treatment: state.bookingForm.treatment,
+date: state.bookingForm.date,
+time: state.bookingForm.time,
+status: "Pending",
+paid: false,
+amount: 1500
+};
+
+state.appointments.unshift(newAppt);
+state.bookingSuccess = true;
+
+// Automatically launch WhatsApp redirect tab
+window.open(getWhatsAppUrl(), '_blank');
+renderBookingContainer();
+}
+
+function getWhatsAppUrl() {
+const formattedPhone = "916366649777";
+const messageText = `Hello Dr. Shekhar Reddy Dental Clinic,
+
+I would like to confirm my appointment booking:
+*Patient Name*: ${state.bookingForm.name}
+*Contact Phone*: ${state.bookingForm.phone}
+*Dentist*: ${state.bookingForm.doctor}
+*Treatment Category*: ${state.bookingForm.treatment}
+*Preferred Date*: ${state.bookingForm.date}
+*Preferred Time Slot*: ${state.bookingForm.time}
+*Special Clinical Notes*: ${state.bookingForm.notes || 'None'}`;
+
+return `https://api.whatsapp.com/send?phone=${formattedPhone}&text=${encodeURIComponent(messageText)}`;
+}
+
+function resetBookingSuccess() {
+state.bookingSuccess = false;
+state.bookingForm = { name: '', phone: '', doctor: DOCTORS[0].name, treatment: TREATMENTS[0].name, date: '', time: '10:00 AM', notes: '' };
+renderBookingContainer();
+}
+
+
+// --- STREAMING_CHUNK:Designing Portals and Dashboard States... ---
+// --- TAB 5 DASHBOARDS STATE HANDLERS ---
+function renderDashboardRoles() {
+const container = document.getElementById('dashboard-roles-container');
+if (!container) return;
+
+container.innerHTML = [
+{ id: 'patient', label: 'Patient Lounge' },
+{ id: 'doctor', label: 'Doctor Suite' },
+{ id: 'admin', label: 'Admin Panel' }
+].map(role => `
+<button
+onclick="selectDashboardRole('${role.id}')"
+class="text-xs px-3 py-1.5 rounded-lg font-bold transition ${
+state.currentUserRole === role.id
+? 'bg-blue-600 text-white'
+: 'bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-300 hover:bg-slate-50'
+}"
+>
+${role.label}
+</button>
+`).join('');
+}
+
+function selectDashboardRole(roleId) {
+state.currentUserRole = roleId;
+if (roleId !== 'patient') {
+state.isPatientLoggedIn = false;
+}
+renderDashboardRoles();
+renderDashboardViewport();
+}
+
+function renderDashboardViewport() {
+const viewport = document.getElementById('dashboard-viewport');
+if (!viewport) return;
+
+if (state.currentUserRole === 'patient') {
+if (!state.isPatientLoggedIn) {
+// PATIENT LOGIN PREVIEW
+viewport.innerHTML = `
+<div class="max-w-md mx-auto py-8 space-y-6 text-center">
+<div class="w-12 h-12 bg-blue-100 dark:bg-blue-950 text-blue-600 rounded-full flex items-center justify-center mx-auto">
+<i data-lucide="user" class="w-6 h-6"></i>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-bold">Access Patient Lounge</h3>
+<p class="text-xs text-slate-500">Enter your phone number registered during clinical booking to see past medical documents, prescriptions, and status trackers.</p>
+</div>
+
+<form onsubmit="handlePatientLogin(event)" class="space-y-4">
+<input
+type="tel"
+required
+id="patient-login-phone"
+placeholder="Enter phone number (e.g., 9876543210)"
+value="${state.patientLoginPhone}"
+class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-3 text-center font-bold text-slate-900 dark:text-white"
+/>
+<button
+type="submit"
+class="w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-3 rounded-xl transition"
+>
+Enter Secured Patient Portal
+</button>
+</form>
+
+<p class="text-[10px] text-slate-400">
+*For testing use <strong class="text-blue-500">9876543210</strong> to instantly load Amit Kumar's dashboard sample data.
+</p>
+</div>
+`;
+} else {
+// LOGGED IN PATIENT LOUNGE VIEW
+viewport.innerHTML = `
+<div class="space-y-8 animate-fadeIn">
+<div class="flex flex-wrap justify-between items-center pb-6 border-b border-slate-100 dark:border-slate-800 gap-4">
+<div>
+<h3 class="text-xl font-extrabold text-slate-900 dark:text-white">Welcome back, ${state.loggedInPatientData.name}</h3>
+<p class="text-xs text-slate-500">Patient File: ${state.loggedInPatientData.phone} | Status Verified</p>
+</div>
+<button
+onclick="signOutPatient()"
+class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-3 py-1.5 rounded-lg font-bold"
+>
+Sign Out
+</button>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Scheduled Appointments -->
+<div class="lg:col-span-7 space-y-6">
+<h4 class="font-bold text-sm text-slate-400 uppercase tracking-wider">Scheduled Sessions</h4>
+<div class="space-y-4">
+${state.loggedInPatientData.appointments.map(appt => `
+<div class="bg-slate-50 dark:bg-slate-950 p-5 rounded-2xl border border-slate-200 dark:border-slate-850 flex justify-between items-center">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-extrabold text-sm text-slate-900 dark:text-white">${appt.treatment}</span>
+<span class="bg-blue-100 dark:bg-blue-950 text-blue-600 text-[10px] font-bold px-2 py-0.5 rounded">
+${appt.id}
+</span>
+</div>
+<p class="text-xs text-slate-500">Dentist: ${appt.doctor}</p>
+<p class="text-[11px] text-slate-400 font-medium">Session Timing: ${appt.date} (${appt.time})</p>
+</div>
+
+<div class="text-right space-y-1.5">
+<span class="inline-block text-[10px] font-extrabold px-2.5 py-1 rounded-full ${appt.status === 'Confirmed' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">
+${appt.status}
+</span>
+<p class="text-xs font-bold text-slate-900 dark:text-white">₹${appt.amount}</p>
+</div>
+</div>
+`).join('')}
+</div>
+</div>
+
+<!-- Digital clinical records and prescriptions -->
+<div class="lg:col-span-5 space-y-6">
+<h4 class="font-bold text-sm text-slate-400 uppercase tracking-wider">Clinical Records Archive</h4>
+<div class="space-y-4">
+${state.loggedInPatientData.records.map(rec => `
+<div class="bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border border-slate-200 dark:border-slate-850 space-y-2">
+<div class="flex justify-between items-center text-xs">
+<span class="font-bold text-blue-600 dark:text-blue-400">${rec.type}</span>
+<span class="text-slate-400">${rec.date}</span>
+</div>
+<p class="text-xs text-slate-500">Prepared by: ${rec.doctor}</p>
+<p class="text-[11px] text-slate-600 dark:text-slate-300 italic">"Observation: ${rec.note}"</p>
+</div>
+`).join('')}
+
+<!-- Interactive prescription download -->
+<div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 rounded-xl text-white space-y-3 animate-fadeIn">
+<h5 class="font-bold text-xs flex items-center gap-1.5">
+<i data-lucide="file-text" class="w-4 h-4"></i> Active Prescription Digital PDF
+</h5>
+<p class="text-[10px] text-blue-100">Clicking below will print the verified medication structure designed by Dr. Shekhar Reddy.</p>
+<button
+onclick="triggerMockPrescriptionPrint()"
+class="w-full bg-white text-blue-600 font-bold text-xs py-2 rounded-lg hover:bg-slate-100 transition flex items-center justify-center gap-1.5"
+>
+<i data-lucide="download" class="w-3.5 h-3.5"></i> Download Digital Copy
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+}
+} else if (state.currentUserRole === 'doctor') {
+// --- STREAMING_CHUNK:Structuring Doctor suite workspace... ---
+// DOCTOR WORKSPACE SUITE
+viewport.innerHTML = `
+<div class="space-y-8 animate-fadeIn">
+<div class="bg-slate-900 text-white p-6 rounded-3xl grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+<div class="space-y-1">
+<p class="text-xs text-blue-300 font-bold uppercase tracking-wider">Logged In Session</p>
+<h3 class="text-2xl font-bold">Dr. Shekhar Reddy</h3>
+<p class="text-xs text-slate-400">Chief Prosthodontist &amp; Implant Dentist</p>
+</div>
+<div class="bg-white/10 p-4 rounded-2xl border border-white/5 space-y-1">
+<p class="text-xs text-slate-300">Clinician Diagnostics Today</p>
+<p class="text-2xl font-extrabold text-teal-400">${state.appointments.length} Sessions</p>
+</div>
+<div class="bg-white/10 p-4 rounded-2xl border border-white/5 space-y-1">
+<p class="text-xs text-slate-300">Feedback Score</p>
+<p class="text-2xl font-extrabold text-emerald-400">98% Satisfied</p>
+</div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Active Patient Queue -->
+<div class="lg:col-span-7 space-y-4">
+<h4 class="font-extrabold text-sm text-slate-400 uppercase tracking-wider">Patient Care Queue</h4>
+<div class="space-y-3">
+${state.appointments.map(appt => `
+<div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<h5 class="font-extrabold text-sm text-slate-900 dark:text-white">${appt.name}</h5>
+<span class="text-[10px] bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded font-bold text-slate-500">${appt.id}</span>
+</div>
+<p class="text-xs text-slate-500">Target Action: <strong class="text-blue-600">${appt.treatment}</strong></p>
+<p class="text-[11px] text-slate-400">Requested: ${appt.date} at ${appt.time}</p>
+</div>
+
+<div class="flex gap-2">
+<button onclick="initializeConsult('${appt.name}')" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-3 py-2 rounded-xl transition">Initialize Consult</button>
+<button onclick="selectPrescriptionPatient('${appt.id}')" class="bg-slate-100 dark:bg-slate-850 hover:bg-slate-200 text-slate-800 dark:text-white text-xs font-bold px-3 py-2 rounded-xl">Write Rx</button>
+</div>
+</div>
+`).join('')}
+</div>
+</div>
+
+<!-- Prescription Builder Form -->
+<div class="lg:col-span-5 space-y-4">
+<h4 class="font-extrabold text-sm text-slate-400 uppercase tracking-wider">E-Prescription Creator</h4>
+<div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<form onsubmit="handlePrescriptionSubmit(event)" class="space-y-4">
+<div class="space-y-1">
+<label class="text-[11px] font-bold text-slate-500 uppercase">Select Target Patient</label>
+<select id="rx-patient-id" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-2.5 text-slate-900 dark:text-white">
+${state.appointments.map(a => `<option value="${a.id}" ${state.newPrescription.patientId === a.id ? 'selected' : ''}>${a.name} (${a.id})</option>`).join('')}
+</select>
+</div>
+
+<div class="space-y-1">
+<label class="text-[11px] font-bold text-slate-500 uppercase">Medicine Name</label>
+<input type="text" required id="rx-med-name" placeholder="E.g., Ibuprofen 400mg" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-2.5 text-slate-900 dark:text-white">
+</div>
+
+<div class="grid grid-cols-2 gap-2">
+<div class="space-y-1">
+<label class="text-[11px] font-bold text-slate-500 uppercase">Dosage Pattern</label>
+<input type="text" id="rx-dosage" placeholder="E.g., 1-0-1 (After Food)" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-2.5 text-slate-900 dark:text-white">
+</div>
+<div class="space-y-1">
+<label class="text-[11px] font-bold text-slate-500 uppercase">Duration</label>
+<input type="text" id="rx-duration" placeholder="E.g., 5 Days" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-xs rounded-xl p-2.5 text-slate-900 dark:text-white">
+</div>
+</div>
+
+<button type="submit" class="w-full bg-teal-500 hover:bg-teal-600 text-slate-950 font-bold py-2.5 rounded-xl text-xs transition">Sign &amp; Push Prescription PDF</button>
+</form>
+</div>
+
+<!-- Issued Prescriptions List -->
+<div class="space-y-2">
+<p class="text-[10px] uppercase font-bold text-slate-400">Recently Issued Prescriptions</p>
+<div class="space-y-2">
+${state.prescriptions.map(p => `
+<div class="bg-slate-100 dark:bg-slate-950 p-3 rounded-xl border border-slate-200 dark:border-slate-850 flex justify-between items-center text-xs">
+<div>
+<p class="font-bold text-slate-900 dark:text-white">${p.patientName}</p>
+<p class="text-slate-500">${p.medName} | ${p.dosage}</p>
+</div>
+<span class="text-[10px] bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded text-slate-600">${p.duration}</span>
+</div>
+`).join('')}
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+} else if (state.currentUserRole === 'admin') {
+// --- STREAMING_CHUNK:Structuring Admin dashboard components... ---
+// ADMIN PANEL WORKSPACE
+viewport.innerHTML = `
+<div class="space-y-8 animate-fadeIn">
+<!-- Analytics Overview Cards -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-850 shadow-sm">
+<p class="text-xs text-slate-400 uppercase font-bold">Practice Revenue</p>
+<p class="text-2xl font-extrabold text-blue-600 dark:text-blue-400 mt-1">₹61,800</p>
+<p class="text-[10px] text-slate-500">From verified sessions</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-850 shadow-sm">
+<p class="text-xs text-slate-400 uppercase font-bold">Pending Invoices</p>
+<p class="text-2xl font-extrabold text-amber-500 mt-1">1 Patient</p>
+<p class="text-[10px] text-slate-500">Est: ₹1,800 total pending</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-850 shadow-sm">
+<p class="text-xs text-slate-400 uppercase font-bold">Active Staff Count</p>
+<p class="text-2xl font-extrabold text-teal-500 mt-1">6 Personnel</p>
+<p class="text-[10px] text-slate-500">Includes MDS doctors &amp; desk</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-850 shadow-sm">
+<p class="text-xs text-slate-400 uppercase font-bold">Clinical Score</p>
+<p class="text-2xl font-extrabold text-indigo-500 mt-1">4.92 / 5.0</p>
+<p class="text-[10px] text-slate-500">Across 1200 verified reviews</p>
+</div>
+</div>
+
+<!-- Patient directory configuration table -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+<div class="flex justify-between items-center flex-wrap gap-4">
+<div class="space-y-1">
+<h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Primary Patient Practice Directory</h4>
+<p class="text-xs text-slate-500">Manage, confirm, and update billing schedules for all active bookings.</p>
+</div>
+<button
+onclick="navigate('appointment')"
+class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2 px-4 rounded-xl flex items-center gap-1.5 shadow"
+>
+<i data-lucide="plus" class="w-4 h-4"></i> Add Patient Manually
+</button>
+</div>
+
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs">
+<thead class="bg-slate-50 dark:bg-slate-950 uppercase font-bold text-slate-400 text-[10px] tracking-wider border-b border-slate-200 dark:border-slate-850">
+<tr>
+<th class="p-3">ID</th>
+<th class="p-3">Patient Name</th>
+<th class="p-3">Assigned Dentist</th>
+<th class="p-3">Treatment Protocol</th>
+<th class="p-3">Scheduled Date</th>
+<th class="p-3">Verification</th>
+<th class="p-3">Bill Status</th>
+<th class="p-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-850" id="admin-patient-table-rows">
+<!-- Populated dynamically via JS -->
+</tbody>
+</table>
+</div>
+</div>
+</div>
+`;
+renderAdminPatientRows();
+}
+
+lucide.createIcons();
+}
+
+function handlePatientLogin(event) {
+event.preventDefault();
+const phoneVal = document.getElementById('patient-login-phone').value;
+state.patientLoginPhone = phoneVal;
+
+const matchedAppointments = state.appointments.filter(a => a.phone.includes(phoneVal) || phoneVal === "9876543210");
+state.loggedInPatientData = {
+name: matchedAppointments.length > 0 ? matchedAppointments[0].name : "Premium Guest Patient",
+phone: phoneVal,
+appointments: matchedAppointments.length > 0 ? matchedAppointments : [
+{ id: "A-999", name: "Guest Patient", phone: phoneVal, doctor: "Dr. Shekhar Reddy", treatment: "Routine Examination", date: "2026-07-10", time: "11:00 AM", status: "Confirmed", paid: true, amount: 500 }
+],
+records: [
+{ date: "2026-05-15", doctor: "Dr. Shekhar Reddy", type: "Digital X-Ray", note: "No interproximal decay detected. Mild plaque accumulation." },
+{ date: "2026-01-20", doctor: "Dr. Priya Sharma", type: "Dental Scaling", note: "Plaque removed successfully. Follow up recommended in 6 months." }
+]
+};
+
+state.isPatientLoggedIn = true;
+renderDashboardViewport();
+}
+
+function signOutPatient() {
+state.isPatientLoggedIn = false;
+state.patientLoginPhone = '';
+state.loggedInPatientData = null;
+renderDashboardViewport();
+}
+
+function triggerMockPrescriptionPrint() {
+alert("Downloading Prescription Document:\n\nPatient: Amit Kumar\nMedication: Amoxicillin 500mg\nFrequency: Twice Daily (After Food)\nDuration: 5 Days\n\nPrescription Signed by Dr. Shekhar Reddy");
+}
+
+function initializeConsult(patientName) {
+alert(`Simulated: Initializing consultation room check for ${patientName}. Pulling clinical jaw layouts and imaging diagnostic charts...`);
+}
+
+function selectPrescriptionPatient(id) {
+state.newPrescription.patientId = id;
+renderDashboardViewport();
+}
+
+function handlePrescriptionSubmit(event) {
+event.preventDefault();
+const patientId = document.getElementById('rx-patient-id').value;
+const medName = document.getElementById('rx-med-name').value;
+const dosage = document.getElementById('rx-dosage').value;
+const duration = document.getElementById('rx-duration').value;
+
+const appt = state.appointments.find(a => a.id === patientId);
+const newP = {
+id: `P-${Math.floor(10 + Math.random() * 90)}`,
+patientName: appt ? appt.name : "Unknown Patient",
+medName: medName,
+dosage: dosage || "1-0-1 (After Food)",
+duration: duration || "5 Days",
+date: new Date().toISOString().split('T')[0]
+};
+
+state.prescriptions.unshift(newP);
+document.getElementById('rx-med-name').value = '';
+document.getElementById('rx-dosage').value = '';
+document.getElementById('rx-duration').value = '';
+renderDashboardViewport();
+}
+
+function confirmPatientAppointment(id) {
+const appt = state.appointments.find(a => a.id === id);
+if (appt) {
+appt.status = "Confirmed";
+renderAdminPatientRows();
+}
+}
+
+function removePatientAppointment(id) {
+state.appointments = state.appointments.filter(a => a.id !== id);
+renderAdminPatientRows();
+}
+
+function renderAdminPatientRows() {
+const tbody = document.getElementById('admin-patient-table-rows');
+if (!tbody) return;
+
+tbody.innerHTML = state.appointments.map(appt => `
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-950/40">
+<td class="p-3 font-bold text-blue-600 dark:text-blue-400">${appt.id}</td>
+<td class="p-3">
+<div>
+<p class="font-extrabold text-slate-900 dark:text-white">${appt.name}</p>
+<p class="text-[10px] text-slate-400">${appt.phone}</p>
+</div>
+</td>
+<td class="p-3 text-slate-600 dark:text-slate-300">${appt.doctor}</td>
+<td class="p-3 font-medium">${appt.treatment}</td>
+<td class="p-3">${appt.date} (${appt.time})</td>
+<td class="p-3">
+<span class="px-2 py-0.5 rounded text-[10px] font-extrabold ${appt.status === 'Confirmed' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">
+${appt.status}
+</span>
+</td>
+<td class="p-3">
+<span class="px-2 py-0.5 rounded text-[10px] font-extrabold ${appt.paid ? 'bg-indigo-100 text-indigo-800' : 'bg-red-100 text-red-800'}">
+${appt.paid ? 'Paid' : 'Unpaid'}
+</span>
+</td>
+<td class="p-3 text-right space-x-1.5 whitespace-nowrap">
+<button onclick="confirmPatientAppointment('${appt.id}')" class="text-emerald-500 hover:underline font-bold">Confirm</button>
+<button onclick="removePatientAppointment('${appt.id}')" class="text-red-500 hover:underline font-bold">Remove</button>
+</td>
+</tr>
+`).join('');
+}
+
+
+// --- STREAMING_CHUNK:Running initialization routines on screen mount... ---
+// --- MASTER RENDER FUNCTION ---
+function render() {
+renderHomeTreatments();
+renderTestimonials();
+renderTreatmentsList();
+renderDoctorsBoard();
+renderAboutDoctors();
+renderAIWizard();
+renderBookingContainer();
+renderDashboardRoles();
+renderDashboardViewport();
+
+// Ensure Lucide updates all freshly rendered vector nodes
+lucide.createIcons();
+}
+
+// Run when browser window has fully compiled raw tags
+window.onload = function() {
+// Pre-populate some dates for active placeholders
+const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+state.bookingForm.date = tomorrow.toISOString().split('T')[0];
+
+// Initial layout paint
+render();
+};
+</script>
+</body>
+</html>
